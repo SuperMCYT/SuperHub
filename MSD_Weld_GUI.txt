@@ -1,0 +1,218 @@
+--by Austin K
+local coregui = game:GetService("CoreGui")
+local Remote = game.ReplicatedStorage.Remotes['ClientMakeWeldJoint']
+local localplayer = game.Players.LocalPlayer
+local Mouse = localplayer:GetMouse()
+
+local w1
+local w2
+local ghost
+--ui
+local ScreenGui = Instance.new("ScreenGui")
+local Weld2 = Instance.new("TextLabel")
+local Weld1 = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local WeldRot = Instance.new("TextBox")
+local WeldPos = Instance.new("TextBox")
+
+local square = Instance.new("BoxHandleAdornment", workspace)
+square.Size = Vector3.new(0.05, 0.05, 0.05)
+square.Color3 = BrickColor.new("Really red").Color
+square.ZIndex = 1
+square.AlwaysOnTop = true
+--Properties:
+ScreenGui.Parent = game:GetService("CoreGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Weld2.Name = "Weld2"
+Weld2.Parent = ScreenGui
+Weld2.AnchorPoint = Vector2.new(0.5, 0.5)
+Weld2.BackgroundColor3 = Color3.new(1, 0.470588, 0)
+Weld2.BackgroundTransparency = 0.80000001192093
+Weld2.Position = UDim2.new(0.910000026, 0, 0.419999987, 0)
+Weld2.Size = UDim2.new(0.150000006, 0, 0.0500000007, 0)
+Weld2.Font = Enum.Font.SourceSansLight
+Weld2.Text = "Part1:"
+Weld2.TextColor3 = Color3.new(1, 1, 1)
+Weld2.TextSize = 30
+
+Weld1.Name = "Weld1"
+Weld1.Parent = ScreenGui
+Weld1.AnchorPoint = Vector2.new(0.5, 0.5)
+Weld1.BackgroundColor3 = Color3.new(1, 0.470588, 0)
+Weld1.BackgroundTransparency = 0.80000001192093
+Weld1.Position = UDim2.new(0.910000026, 0, 0.360000014, 0)
+Weld1.Size = UDim2.new(0.150000006, 0, 0.0500000007, 0)
+Weld1.Font = Enum.Font.SourceSansLight
+Weld1.Text = "Part0:"
+Weld1.TextColor3 = Color3.new(1, 1, 1)
+Weld1.TextSize = 30
+
+TextButton.Parent = ScreenGui
+TextButton.AnchorPoint = Vector2.new(0.5, 0.5)
+TextButton.BackgroundColor3 = Color3.new(1, 0.470588, 0)
+TextButton.BackgroundTransparency = 0.80000001192093
+TextButton.BorderColor3 = Color3.new(0, 0, 0)
+TextButton.BorderSizePixel = 2
+TextButton.Position = UDim2.new(0.910000026, 0, 0.644999981, 0)
+TextButton.Size = UDim2.new(0.100000001, 0, 0.0500000007, 0)
+TextButton.Font = Enum.Font.SourceSansLight
+TextButton.Text = "Weld"
+TextButton.TextColor3 = Color3.new(1, 1, 1)
+TextButton.TextSize = 30
+TextButton.TextWrapped = true
+
+WeldRot.Name = "WeldRot"
+WeldRot.Parent = ScreenGui
+WeldRot.AnchorPoint = Vector2.new(0.5, 0.5)
+WeldRot.BackgroundColor3 = Color3.new(1, 0.470588, 0)
+WeldRot.BackgroundTransparency = 0.80000001192093
+WeldRot.BorderColor3 = Color3.new(1, 1, 1)
+WeldRot.BorderSizePixel = 2
+WeldRot.Position = UDim2.new(0.910000026, 0, 0.579999983, 0)
+WeldRot.Size = UDim2.new(0.150000006, 0, 0.0500000007, 0)
+WeldRot.ClearTextOnFocus = false
+WeldRot.Font = Enum.Font.SourceSansLight
+WeldRot.PlaceholderText = "Rotation"
+WeldRot.Text = "0,0,0"
+WeldRot.TextColor3 = Color3.new(1, 1, 1)
+WeldRot.TextScaled = true
+WeldRot.TextSize = 30
+WeldRot.TextWrapped = true
+
+WeldPos.Name = "WeldPos"
+WeldPos.Parent = ScreenGui
+WeldPos.AnchorPoint = Vector2.new(0.5, 0.5)
+WeldPos.BackgroundColor3 = Color3.new(1, 0.470588, 0)
+WeldPos.BackgroundTransparency = 0.80000001192093
+WeldPos.BorderColor3 = Color3.new(1, 1, 1)
+WeldPos.BorderSizePixel = 2
+WeldPos.Position = UDim2.new(0.910000026, 0, 0.5, 0)
+WeldPos.Size = UDim2.new(0.150000006, 0, 0.0799999982, 0)
+WeldPos.ClearTextOnFocus = false
+WeldPos.Font = Enum.Font.SourceSansLight
+WeldPos.PlaceholderText = "X,Y,Z"
+WeldPos.Text = "0,0,0"
+WeldPos.TextColor3 = Color3.new(1, 1, 1)
+WeldPos.TextScaled = true
+WeldPos.TextSize = 30
+WeldPos.TextWrapped = true
+
+
+--extra functions
+function EasyRound(Number, Increment)
+	if Increment == 0 then Increment = 0.001; end
+	local MultipleDifference = Number % Increment;
+	local LowerMultiple = Number - MultipleDifference;
+	local UpperMultiple = Number - MultipleDifference + Increment;
+	local LowerMultipleProximity = math.abs(Number - LowerMultiple);
+	local UpperMultipleProximity = math.abs(Number - UpperMultiple);
+	if LowerMultipleProximity <= UpperMultipleProximity then
+		Number = LowerMultiple;
+	else
+		Number = UpperMultiple;
+	end;
+	return Number;
+end;
+
+function PositiveIntegerMask(text)
+	return text:gsub("[^%d.,-]+", "")
+end
+
+-------main-------
+local weldpos = Vector3.new(0,0,0)
+local weldrot = Vector3.new(0,0,0)
+--textboxes
+WeldPos.Changed:Connect(function()
+	WeldPos.Text = PositiveIntegerMask(WeldPos.Text)
+	local bruh = {}
+	for num in string.gmatch(WeldPos.Text, "[%-%d%.]+") do
+		table.insert(bruh, tonumber(num));
+	end
+	weldpos = Vector3.new(unpack(bruh))
+end)
+WeldRot.Changed:Connect(function()
+	WeldRot.Text = PositiveIntegerMask(WeldRot.Text)
+	local bruh = {}
+	for num in string.gmatch(WeldRot.Text, "[%-%d%.]+") do
+		table.insert(bruh, tonumber(num));
+	end
+	weldrot = Vector3.new(unpack(bruh))
+end)
+--keybinds
+warn("brought to you by Austin K")
+Mouse.KeyDown:Connect(function(key)
+	if key == "j" then
+		w1 = Mouse.Target
+		if w1.Parent:IsA("Model") then --text
+			Weld1.Text = "Part0: " .. w1.Parent.Name
+		else
+			Weld1.Text = "Part0: " .. w1.Material.Name		
+		end
+	elseif key == "u" then 
+		w2 = Mouse.Target
+		if w2.Parent:IsA("Model") then --creating ghost model
+			Weld2.Text = "Part1: " .. w2.Parent.Name
+			if ghost then ghost:Destroy(); ghost = nil;square.Adornee = nil; end;
+			ghost = w2.Parent:Clone()
+			ghost.Parent = workspace
+			square.Adornee = ghost:FindFirstChild(w2.Name)
+			for _,gpart in pairs(ghost:GetChildren()) do
+				if gpart:IsA("BasePart") or gpart:IsA("UnionOperation") or gpart:IsA("MeshPart") then
+					gpart.Anchored = true
+					gpart.Locked = true
+					gpart.Transparency = 0.7
+					gpart.CanCollide = false
+				end
+			end
+		else--creating ghost part
+			Weld2.Text = "Part1: " .. w2.Material.Name
+			if ghost then ghost:Destroy(); ghost = nil;square.Adornee = nil; end;
+			ghost = w2:Clone()
+			ghost.Parent = workspace
+			ghost.Anchored = true
+			ghost.Locked = true
+			ghost.CanCollide = false
+			ghost.Transparency = 0.7
+			square.Adornee = ghost
+			Mouse.TargetFilter = ghost
+		end
+	end
+end)
+
+
+--weld
+TextButton.MouseButton1Down:Connect(function()
+	if Mouse.Target then
+		print("weld")
+		local Arguments = {
+			[1] = w1, --part0
+			[2] = w2, --part1
+			[3] = CFrame.new(weldpos) * CFrame.Angles(math.rad(weldrot.X),math.rad(weldrot.Y),math.rad(weldrot.Z)), --c0
+			[4] = CFrame.new(0,0,0), --c1
+			[5] = 0.05 --weld height
+		}
+		Remote:FireServer(unpack(Arguments))
+		wait()
+		ghost:Destroy()
+		ghost = nil
+		square.Adornee = nil
+		Weld1.Text = "Part0:"
+		Weld2.Text = "Part1:"
+		w1 = nil
+		w2 = nil
+	end
+end)
+--ghost position
+while true do
+	if w2 and w1 and ghost then
+		if ghost:IsA("Model") then
+			if ghost.PrimaryPart then
+				ghost:SetPrimaryPartCFrame(w1.CFrame *CFrame.new(weldpos) * CFrame.Angles(math.rad(weldrot.X),math.rad(weldrot.Y),math.rad(weldrot.Z)))
+			end
+		else
+			ghost.CFrame = w1.CFrame * CFrame.new(weldpos) * CFrame.Angles(math.rad(weldrot.X),math.rad(weldrot.Y),math.rad(weldrot.Z))
+		end
+	end
+	game:GetService("RunService").RenderStepped:Wait()
+end
