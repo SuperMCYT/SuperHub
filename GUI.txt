@@ -1,0 +1,765 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Hub = Instance.new("ScreenGui")
+local Frame = Instance.new("ImageLabel")
+local Name = Instance.new("TextLabel")
+local TextLabel_Roundify_12px = Instance.new("ImageLabel")
+local Games = Instance.new("TextLabel")
+local TextLabel_Roundify_12px_2 = Instance.new("ImageLabel")
+local Scripts = Instance.new("TextLabel")
+local Scripts_2 = Instance.new("ImageLabel")
+local Games_List = Instance.new("ScrollingFrame")
+local Arsenal = Instance.new("TextButton")
+local TextButton_Roundify_12px = Instance.new("ImageLabel")
+local BuildaBoatForTreasure = Instance.new("TextButton")
+local TextButton_Roundify_12px_2 = Instance.new("ImageLabel")
+local LumberTycoon2 = Instance.new("TextButton")
+local TextButton_Roundify_12px_3 = Instance.new("ImageLabel")
+local MetalworksSandboxDemo = Instance.new("TextButton")
+local TextButton_Roundify_12px_4 = Instance.new("ImageLabel")
+local Jailbreak = Instance.new("TextButton")
+local TextButton_Roundify_12px_5 = Instance.new("ImageLabel")
+local Close = Instance.new("TextButton")
+local TextButton_Roundify_12px_6 = Instance.new("ImageLabel")
+local MSD_Scripts_List = Instance.new("ScrollingFrame")
+local Weld_GUI = Instance.new("TextButton")
+local TextButton_Roundify_12px_7 = Instance.new("ImageLabel")
+local Arsenal_Scripts_List = Instance.new("ScrollingFrame")
+local Large_Torso = Instance.new("TextButton")
+local TextButton_Roundify_12px_8 = Instance.new("ImageLabel")
+local BaBFT_Scripts_List = Instance.new("ScrollingFrame")
+local Unlimited_Blocks = Instance.new("TextButton")
+local TextButton_Roundify_12px_9 = Instance.new("ImageLabel")
+local LT2_Scripts_List = Instance.new("ScrollingFrame")
+local Axe_Duplication = Instance.new("TextButton")
+local TextButton_Roundify_12px_10 = Instance.new("ImageLabel")
+local Jailbreak_Scripts_List = Instance.new("ScrollingFrame")
+local Autofarm = Instance.new("TextButton")
+local TextButton_Roundify_12px_11 = Instance.new("ImageLabel")
+local Infinite_Nitro = Instance.new("TextButton")
+local TextButton_Roundify_12px_12 = Instance.new("ImageLabel")
+local Car_Speed = Instance.new("TextButton")
+local TextButton_Roundify_12px_13 = Instance.new("ImageLabel")
+local Car_Jumppressm = Instance.new("TextButton")
+local TextButton_Roundify_12px_14 = Instance.new("ImageLabel")
+local Activator = Instance.new("ScreenGui")
+local Frame_2 = Instance.new("Frame")
+local Open = Instance.new("TextButton")
+local Open_Roundify_12px = Instance.new("ImageLabel")
+
+--Properties:
+
+Hub.Name = "Hub"
+Hub.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Hub.ResetOnSpawn = false
+
+Frame.Name = "Frame"
+Frame.Parent = Hub
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BackgroundTransparency = 1.000
+Frame.Position = UDim2.new(0.0719999969, 0, 0.355555564, 0)
+Frame.Size = UDim2.new(0, 500, 0, 500)
+Frame.Image = "rbxassetid://3570695787"
+Frame.ImageColor3 = Color3.fromRGB(255, 223, 211)
+Frame.ImageTransparency = 0.100
+Frame.ScaleType = Enum.ScaleType.Slice
+Frame.SliceCenter = Rect.new(100, 100, 100, 100)
+Frame.SliceScale = 0.120
+
+Name.Name = "Name"
+Name.Parent = Frame
+Name.BackgroundColor3 = Color3.fromRGB(179, 255, 233)
+Name.BackgroundTransparency = 1.000
+Name.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Name.BorderSizePixel = 0
+Name.Size = UDim2.new(0, 500, 0, 50)
+Name.Font = Enum.Font.SourceSans
+Name.Text = "Super Hub"
+Name.TextColor3 = Color3.fromRGB(0, 0, 0)
+Name.TextSize = 30.000
+
+TextLabel_Roundify_12px.Name = "TextLabel_Roundify_12px"
+TextLabel_Roundify_12px.Parent = Name
+TextLabel_Roundify_12px.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_Roundify_12px.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_Roundify_12px.BackgroundTransparency = 1.000
+TextLabel_Roundify_12px.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_Roundify_12px.Size = UDim2.new(1, 0, 1, 0)
+TextLabel_Roundify_12px.Image = "rbxassetid://3570695787"
+TextLabel_Roundify_12px.ImageColor3 = Color3.fromRGB(179, 255, 233)
+TextLabel_Roundify_12px.ImageTransparency = 0.600
+TextLabel_Roundify_12px.ScaleType = Enum.ScaleType.Slice
+TextLabel_Roundify_12px.SliceCenter = Rect.new(100, 100, 100, 100)
+TextLabel_Roundify_12px.SliceScale = 0.120
+
+Games.Name = "Games"
+Games.Parent = Frame
+Games.BackgroundColor3 = Color3.fromRGB(179, 255, 233)
+Games.BackgroundTransparency = 1.000
+Games.BorderSizePixel = 0
+Games.Position = UDim2.new(0.020012347, 0, 0.12039344, 0)
+Games.Size = UDim2.new(0, 200, 0, 50)
+Games.Font = Enum.Font.SourceSans
+Games.Text = "Games"
+Games.TextColor3 = Color3.fromRGB(0, 0, 0)
+Games.TextSize = 30.000
+
+TextLabel_Roundify_12px_2.Name = "TextLabel_Roundify_12px"
+TextLabel_Roundify_12px_2.Parent = Games
+TextLabel_Roundify_12px_2.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_Roundify_12px_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_Roundify_12px_2.BackgroundTransparency = 1.000
+TextLabel_Roundify_12px_2.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_Roundify_12px_2.Size = UDim2.new(1, 0, 1, 0)
+TextLabel_Roundify_12px_2.Image = "rbxassetid://3570695787"
+TextLabel_Roundify_12px_2.ImageColor3 = Color3.fromRGB(179, 255, 233)
+TextLabel_Roundify_12px_2.ImageTransparency = 0.600
+TextLabel_Roundify_12px_2.ScaleType = Enum.ScaleType.Slice
+TextLabel_Roundify_12px_2.SliceCenter = Rect.new(100, 100, 100, 100)
+TextLabel_Roundify_12px_2.SliceScale = 0.120
+
+Scripts.Name = "Scripts"
+Scripts.Parent = Frame
+Scripts.BackgroundColor3 = Color3.fromRGB(179, 255, 233)
+Scripts.BackgroundTransparency = 1.000
+Scripts.BorderSizePixel = 0
+Scripts.Position = UDim2.new(0.580358028, 0, 0.12039344, 0)
+Scripts.Size = UDim2.new(0, 200, 0, 50)
+Scripts.Font = Enum.Font.SourceSans
+Scripts.Text = "Scripts"
+Scripts.TextColor3 = Color3.fromRGB(0, 0, 0)
+Scripts.TextSize = 30.000
+
+Scripts_2.Name = "Scripts"
+Scripts_2.Parent = Scripts
+Scripts_2.AnchorPoint = Vector2.new(0.5, 0.5)
+Scripts_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Scripts_2.BackgroundTransparency = 1.000
+Scripts_2.Position = UDim2.new(0.5, 0, 0.5, 0)
+Scripts_2.Size = UDim2.new(1, 0, 1, 0)
+Scripts_2.Image = "rbxassetid://3570695787"
+Scripts_2.ImageColor3 = Color3.fromRGB(179, 255, 233)
+Scripts_2.ImageTransparency = 0.600
+Scripts_2.ScaleType = Enum.ScaleType.Slice
+Scripts_2.SliceCenter = Rect.new(100, 100, 100, 100)
+Scripts_2.SliceScale = 0.120
+
+Games_List.Name = "Games_List"
+Games_List.Parent = Frame
+Games_List.BackgroundColor3 = Color3.fromRGB(179, 255, 233)
+Games_List.BackgroundTransparency = 0.600
+Games_List.BorderSizePixel = 0
+Games_List.Position = UDim2.new(0.0200800002, 0, 0.240533337, 0)
+Games_List.Size = UDim2.new(0, 199, 0, 368)
+Games_List.HorizontalScrollBarInset = Enum.ScrollBarInset.Always
+
+Arsenal.Name = "Arsenal"
+Arsenal.Parent = Games_List
+Arsenal.BackgroundColor3 = Color3.fromRGB(179, 255, 233)
+Arsenal.BackgroundTransparency = 1.000
+Arsenal.BorderSizePixel = 0
+Arsenal.Position = UDim2.new(0.0399999991, 0, 0, 10)
+Arsenal.Size = UDim2.new(0, 165, 0, 50)
+Arsenal.Font = Enum.Font.SourceSans
+Arsenal.Text = "Arsenal"
+Arsenal.TextColor3 = Color3.fromRGB(0, 0, 0)
+Arsenal.TextSize = 15.000
+
+TextButton_Roundify_12px.Name = "TextButton_Roundify_12px"
+TextButton_Roundify_12px.Parent = Arsenal
+TextButton_Roundify_12px.Active = true
+TextButton_Roundify_12px.AnchorPoint = Vector2.new(0.5, 0.5)
+TextButton_Roundify_12px.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_Roundify_12px.BackgroundTransparency = 1.000
+TextButton_Roundify_12px.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextButton_Roundify_12px.Selectable = true
+TextButton_Roundify_12px.Size = UDim2.new(1, 0, 1, 0)
+TextButton_Roundify_12px.Image = "rbxassetid://3570695787"
+TextButton_Roundify_12px.ImageColor3 = Color3.fromRGB(179, 255, 233)
+TextButton_Roundify_12px.ImageTransparency = 0.600
+TextButton_Roundify_12px.ScaleType = Enum.ScaleType.Slice
+TextButton_Roundify_12px.SliceCenter = Rect.new(100, 100, 100, 100)
+TextButton_Roundify_12px.SliceScale = 0.120
+
+BuildaBoatForTreasure.Name = "Build a Boat For Treasure"
+BuildaBoatForTreasure.Parent = Games_List
+BuildaBoatForTreasure.BackgroundColor3 = Color3.fromRGB(179, 255, 233)
+BuildaBoatForTreasure.BackgroundTransparency = 1.000
+BuildaBoatForTreasure.BorderSizePixel = 0
+BuildaBoatForTreasure.Position = UDim2.new(0.0399999991, 0, 0, 70)
+BuildaBoatForTreasure.Size = UDim2.new(0, 165, 0, 50)
+BuildaBoatForTreasure.Font = Enum.Font.SourceSans
+BuildaBoatForTreasure.Text = "Build a Boat For Treasure"
+BuildaBoatForTreasure.TextColor3 = Color3.fromRGB(0, 0, 0)
+BuildaBoatForTreasure.TextSize = 15.000
+
+TextButton_Roundify_12px_2.Name = "TextButton_Roundify_12px"
+TextButton_Roundify_12px_2.Parent = BuildaBoatForTreasure
+TextButton_Roundify_12px_2.Active = true
+TextButton_Roundify_12px_2.AnchorPoint = Vector2.new(0.5, 0.5)
+TextButton_Roundify_12px_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_Roundify_12px_2.BackgroundTransparency = 1.000
+TextButton_Roundify_12px_2.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextButton_Roundify_12px_2.Selectable = true
+TextButton_Roundify_12px_2.Size = UDim2.new(1, 0, 1, 0)
+TextButton_Roundify_12px_2.Image = "rbxassetid://3570695787"
+TextButton_Roundify_12px_2.ImageColor3 = Color3.fromRGB(179, 255, 233)
+TextButton_Roundify_12px_2.ImageTransparency = 0.600
+TextButton_Roundify_12px_2.ScaleType = Enum.ScaleType.Slice
+TextButton_Roundify_12px_2.SliceCenter = Rect.new(100, 100, 100, 100)
+TextButton_Roundify_12px_2.SliceScale = 0.120
+
+LumberTycoon2.Name = "Lumber Tycoon 2"
+LumberTycoon2.Parent = Games_List
+LumberTycoon2.BackgroundColor3 = Color3.fromRGB(179, 255, 233)
+LumberTycoon2.BackgroundTransparency = 1.000
+LumberTycoon2.BorderSizePixel = 0
+LumberTycoon2.Position = UDim2.new(0.0399999991, 0, 0, 190)
+LumberTycoon2.Size = UDim2.new(0, 165, 0, 50)
+LumberTycoon2.Font = Enum.Font.SourceSans
+LumberTycoon2.Text = "Lumber Tycoon 2"
+LumberTycoon2.TextColor3 = Color3.fromRGB(0, 0, 0)
+LumberTycoon2.TextSize = 15.000
+
+TextButton_Roundify_12px_3.Name = "TextButton_Roundify_12px"
+TextButton_Roundify_12px_3.Parent = LumberTycoon2
+TextButton_Roundify_12px_3.Active = true
+TextButton_Roundify_12px_3.AnchorPoint = Vector2.new(0.5, 0.5)
+TextButton_Roundify_12px_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_Roundify_12px_3.BackgroundTransparency = 1.000
+TextButton_Roundify_12px_3.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextButton_Roundify_12px_3.Selectable = true
+TextButton_Roundify_12px_3.Size = UDim2.new(1, 0, 1, 0)
+TextButton_Roundify_12px_3.Image = "rbxassetid://3570695787"
+TextButton_Roundify_12px_3.ImageColor3 = Color3.fromRGB(179, 255, 233)
+TextButton_Roundify_12px_3.ImageTransparency = 0.600
+TextButton_Roundify_12px_3.ScaleType = Enum.ScaleType.Slice
+TextButton_Roundify_12px_3.SliceCenter = Rect.new(100, 100, 100, 100)
+TextButton_Roundify_12px_3.SliceScale = 0.120
+
+MetalworksSandboxDemo.Name = "Metalworks Sandbox Demo"
+MetalworksSandboxDemo.Parent = Games_List
+MetalworksSandboxDemo.BackgroundColor3 = Color3.fromRGB(179, 255, 233)
+MetalworksSandboxDemo.BackgroundTransparency = 1.000
+MetalworksSandboxDemo.BorderSizePixel = 0
+MetalworksSandboxDemo.Position = UDim2.new(0.0399999991, 0, 0, 250)
+MetalworksSandboxDemo.Size = UDim2.new(0, 165, 0, 50)
+MetalworksSandboxDemo.Font = Enum.Font.SourceSans
+MetalworksSandboxDemo.Text = "Metalworks Sandbox Demo"
+MetalworksSandboxDemo.TextColor3 = Color3.fromRGB(0, 0, 0)
+MetalworksSandboxDemo.TextSize = 15.000
+
+TextButton_Roundify_12px_4.Name = "TextButton_Roundify_12px"
+TextButton_Roundify_12px_4.Parent = MetalworksSandboxDemo
+TextButton_Roundify_12px_4.Active = true
+TextButton_Roundify_12px_4.AnchorPoint = Vector2.new(0.5, 0.5)
+TextButton_Roundify_12px_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_Roundify_12px_4.BackgroundTransparency = 1.000
+TextButton_Roundify_12px_4.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextButton_Roundify_12px_4.Selectable = true
+TextButton_Roundify_12px_4.Size = UDim2.new(1, 0, 1, 0)
+TextButton_Roundify_12px_4.Image = "rbxassetid://3570695787"
+TextButton_Roundify_12px_4.ImageColor3 = Color3.fromRGB(179, 255, 233)
+TextButton_Roundify_12px_4.ImageTransparency = 0.600
+TextButton_Roundify_12px_4.ScaleType = Enum.ScaleType.Slice
+TextButton_Roundify_12px_4.SliceCenter = Rect.new(100, 100, 100, 100)
+TextButton_Roundify_12px_4.SliceScale = 0.120
+
+Jailbreak.Name = "Jailbreak"
+Jailbreak.Parent = Games_List
+Jailbreak.BackgroundColor3 = Color3.fromRGB(179, 255, 233)
+Jailbreak.BackgroundTransparency = 1.000
+Jailbreak.BorderSizePixel = 0
+Jailbreak.Position = UDim2.new(0.0399999991, 0, 0, 130)
+Jailbreak.Size = UDim2.new(0, 165, 0, 50)
+Jailbreak.Font = Enum.Font.SourceSans
+Jailbreak.Text = "Jailbreak"
+Jailbreak.TextColor3 = Color3.fromRGB(0, 0, 0)
+Jailbreak.TextSize = 15.000
+
+TextButton_Roundify_12px_5.Name = "TextButton_Roundify_12px"
+TextButton_Roundify_12px_5.Parent = Jailbreak
+TextButton_Roundify_12px_5.Active = true
+TextButton_Roundify_12px_5.AnchorPoint = Vector2.new(0.5, 0.5)
+TextButton_Roundify_12px_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_Roundify_12px_5.BackgroundTransparency = 1.000
+TextButton_Roundify_12px_5.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextButton_Roundify_12px_5.Selectable = true
+TextButton_Roundify_12px_5.Size = UDim2.new(1, 0, 1, 0)
+TextButton_Roundify_12px_5.Image = "rbxassetid://3570695787"
+TextButton_Roundify_12px_5.ImageColor3 = Color3.fromRGB(179, 255, 233)
+TextButton_Roundify_12px_5.ImageTransparency = 0.600
+TextButton_Roundify_12px_5.ScaleType = Enum.ScaleType.Slice
+TextButton_Roundify_12px_5.SliceCenter = Rect.new(100, 100, 100, 100)
+TextButton_Roundify_12px_5.SliceScale = 0.120
+
+Close.Name = "Close"
+Close.Parent = Frame
+Close.BackgroundColor3 = Color3.fromRGB(179, 255, 233)
+Close.BackgroundTransparency = 1.000
+Close.BorderSizePixel = 0
+Close.Position = UDim2.new(0.449999988, 0, 0.140000001, 0)
+Close.Size = UDim2.new(0, 50, 0, 30)
+Close.Font = Enum.Font.SourceSans
+Close.Text = "Close"
+Close.TextColor3 = Color3.fromRGB(0, 0, 0)
+Close.TextSize = 14.000
+
+TextButton_Roundify_12px_6.Name = "TextButton_Roundify_12px"
+TextButton_Roundify_12px_6.Parent = Close
+TextButton_Roundify_12px_6.Active = true
+TextButton_Roundify_12px_6.AnchorPoint = Vector2.new(0.5, 0.5)
+TextButton_Roundify_12px_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_Roundify_12px_6.BackgroundTransparency = 1.000
+TextButton_Roundify_12px_6.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextButton_Roundify_12px_6.Selectable = true
+TextButton_Roundify_12px_6.Size = UDim2.new(1, 0, 1, 0)
+TextButton_Roundify_12px_6.Image = "rbxassetid://3570695787"
+TextButton_Roundify_12px_6.ImageColor3 = Color3.fromRGB(179, 255, 233)
+TextButton_Roundify_12px_6.ImageTransparency = 0.600
+TextButton_Roundify_12px_6.ScaleType = Enum.ScaleType.Slice
+TextButton_Roundify_12px_6.SliceCenter = Rect.new(100, 100, 100, 100)
+TextButton_Roundify_12px_6.SliceScale = 0.120
+
+MSD_Scripts_List.Name = "MSD_Scripts_List"
+MSD_Scripts_List.Parent = Frame
+MSD_Scripts_List.BackgroundColor3 = Color3.fromRGB(179, 255, 233)
+MSD_Scripts_List.BackgroundTransparency = 0.600
+MSD_Scripts_List.BorderSizePixel = 0
+MSD_Scripts_List.Position = UDim2.new(0.582320035, 0, 0.240533337, 0)
+MSD_Scripts_List.Size = UDim2.new(0, 200, 0, 368)
+MSD_Scripts_List.Visible = false
+MSD_Scripts_List.HorizontalScrollBarInset = Enum.ScrollBarInset.Always
+
+Weld_GUI.Name = "Weld_GUI"
+Weld_GUI.Parent = MSD_Scripts_List
+Weld_GUI.BackgroundColor3 = Color3.fromRGB(179, 255, 233)
+Weld_GUI.BackgroundTransparency = 1.000
+Weld_GUI.BorderSizePixel = 0
+Weld_GUI.Position = UDim2.new(0.0399999991, 0, 0, 10)
+Weld_GUI.Size = UDim2.new(0, 165, 0, 50)
+Weld_GUI.Font = Enum.Font.SourceSans
+Weld_GUI.Text = "Weld GUI"
+Weld_GUI.TextColor3 = Color3.fromRGB(0, 0, 0)
+Weld_GUI.TextSize = 15.000
+
+TextButton_Roundify_12px_7.Name = "TextButton_Roundify_12px"
+TextButton_Roundify_12px_7.Parent = Weld_GUI
+TextButton_Roundify_12px_7.Active = true
+TextButton_Roundify_12px_7.AnchorPoint = Vector2.new(0.5, 0.5)
+TextButton_Roundify_12px_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_Roundify_12px_7.BackgroundTransparency = 1.000
+TextButton_Roundify_12px_7.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextButton_Roundify_12px_7.Selectable = true
+TextButton_Roundify_12px_7.Size = UDim2.new(1, 0, 1, 0)
+TextButton_Roundify_12px_7.Image = "rbxassetid://3570695787"
+TextButton_Roundify_12px_7.ImageColor3 = Color3.fromRGB(179, 255, 233)
+TextButton_Roundify_12px_7.ImageTransparency = 0.600
+TextButton_Roundify_12px_7.ScaleType = Enum.ScaleType.Slice
+TextButton_Roundify_12px_7.SliceCenter = Rect.new(100, 100, 100, 100)
+TextButton_Roundify_12px_7.SliceScale = 0.120
+
+Arsenal_Scripts_List.Name = "Arsenal_Scripts_List"
+Arsenal_Scripts_List.Parent = Frame
+Arsenal_Scripts_List.BackgroundColor3 = Color3.fromRGB(179, 255, 233)
+Arsenal_Scripts_List.BackgroundTransparency = 0.600
+Arsenal_Scripts_List.BorderSizePixel = 0
+Arsenal_Scripts_List.Position = UDim2.new(0.582320035, 0, 0.240533337, 0)
+Arsenal_Scripts_List.Size = UDim2.new(0, 200, 0, 368)
+Arsenal_Scripts_List.Visible = false
+Arsenal_Scripts_List.HorizontalScrollBarInset = Enum.ScrollBarInset.Always
+
+Large_Torso.Name = "Large_Torso"
+Large_Torso.Parent = Arsenal_Scripts_List
+Large_Torso.BackgroundColor3 = Color3.fromRGB(179, 255, 233)
+Large_Torso.BackgroundTransparency = 1.000
+Large_Torso.BorderSizePixel = 0
+Large_Torso.Position = UDim2.new(0.0399999991, 0, 0, 10)
+Large_Torso.Size = UDim2.new(0, 165, 0, 50)
+Large_Torso.Font = Enum.Font.SourceSans
+Large_Torso.Text = "Make Players Big"
+Large_Torso.TextColor3 = Color3.fromRGB(0, 0, 0)
+Large_Torso.TextSize = 15.000
+
+TextButton_Roundify_12px_8.Name = "TextButton_Roundify_12px"
+TextButton_Roundify_12px_8.Parent = Large_Torso
+TextButton_Roundify_12px_8.Active = true
+TextButton_Roundify_12px_8.AnchorPoint = Vector2.new(0.5, 0.5)
+TextButton_Roundify_12px_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_Roundify_12px_8.BackgroundTransparency = 1.000
+TextButton_Roundify_12px_8.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextButton_Roundify_12px_8.Selectable = true
+TextButton_Roundify_12px_8.Size = UDim2.new(1, 0, 1, 0)
+TextButton_Roundify_12px_8.Image = "rbxassetid://3570695787"
+TextButton_Roundify_12px_8.ImageColor3 = Color3.fromRGB(179, 255, 233)
+TextButton_Roundify_12px_8.ImageTransparency = 0.600
+TextButton_Roundify_12px_8.ScaleType = Enum.ScaleType.Slice
+TextButton_Roundify_12px_8.SliceCenter = Rect.new(100, 100, 100, 100)
+TextButton_Roundify_12px_8.SliceScale = 0.120
+
+BaBFT_Scripts_List.Name = "BaBFT_Scripts_List"
+BaBFT_Scripts_List.Parent = Frame
+BaBFT_Scripts_List.BackgroundColor3 = Color3.fromRGB(179, 255, 233)
+BaBFT_Scripts_List.BackgroundTransparency = 0.600
+BaBFT_Scripts_List.BorderSizePixel = 0
+BaBFT_Scripts_List.Position = UDim2.new(0.582320035, 0, 0.240533337, 0)
+BaBFT_Scripts_List.Size = UDim2.new(0, 200, 0, 368)
+BaBFT_Scripts_List.Visible = false
+BaBFT_Scripts_List.HorizontalScrollBarInset = Enum.ScrollBarInset.Always
+
+Unlimited_Blocks.Name = "Unlimited_Blocks"
+Unlimited_Blocks.Parent = BaBFT_Scripts_List
+Unlimited_Blocks.BackgroundColor3 = Color3.fromRGB(179, 255, 233)
+Unlimited_Blocks.BackgroundTransparency = 1.000
+Unlimited_Blocks.BorderSizePixel = 0
+Unlimited_Blocks.Position = UDim2.new(0.0399999991, 0, 0, 10)
+Unlimited_Blocks.Size = UDim2.new(0, 165, 0, 50)
+Unlimited_Blocks.Font = Enum.Font.SourceSans
+Unlimited_Blocks.Text = "Unlimited Blocks"
+Unlimited_Blocks.TextColor3 = Color3.fromRGB(0, 0, 0)
+Unlimited_Blocks.TextSize = 15.000
+
+TextButton_Roundify_12px_9.Name = "TextButton_Roundify_12px"
+TextButton_Roundify_12px_9.Parent = Unlimited_Blocks
+TextButton_Roundify_12px_9.Active = true
+TextButton_Roundify_12px_9.AnchorPoint = Vector2.new(0.5, 0.5)
+TextButton_Roundify_12px_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_Roundify_12px_9.BackgroundTransparency = 1.000
+TextButton_Roundify_12px_9.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextButton_Roundify_12px_9.Selectable = true
+TextButton_Roundify_12px_9.Size = UDim2.new(1, 0, 1, 0)
+TextButton_Roundify_12px_9.Image = "rbxassetid://3570695787"
+TextButton_Roundify_12px_9.ImageColor3 = Color3.fromRGB(179, 255, 233)
+TextButton_Roundify_12px_9.ImageTransparency = 0.600
+TextButton_Roundify_12px_9.ScaleType = Enum.ScaleType.Slice
+TextButton_Roundify_12px_9.SliceCenter = Rect.new(100, 100, 100, 100)
+TextButton_Roundify_12px_9.SliceScale = 0.120
+
+LT2_Scripts_List.Name = "LT2_Scripts_List"
+LT2_Scripts_List.Parent = Frame
+LT2_Scripts_List.BackgroundColor3 = Color3.fromRGB(179, 255, 233)
+LT2_Scripts_List.BackgroundTransparency = 0.600
+LT2_Scripts_List.BorderSizePixel = 0
+LT2_Scripts_List.Position = UDim2.new(0.582320035, 0, 0.240533337, 0)
+LT2_Scripts_List.Size = UDim2.new(0, 200, 0, 368)
+LT2_Scripts_List.Visible = false
+LT2_Scripts_List.HorizontalScrollBarInset = Enum.ScrollBarInset.Always
+
+Axe_Duplication.Name = "Axe_Duplication"
+Axe_Duplication.Parent = LT2_Scripts_List
+Axe_Duplication.BackgroundColor3 = Color3.fromRGB(179, 255, 233)
+Axe_Duplication.BackgroundTransparency = 1.000
+Axe_Duplication.BorderSizePixel = 0
+Axe_Duplication.Position = UDim2.new(0.0399999991, 0, 0, 10)
+Axe_Duplication.Size = UDim2.new(0, 165, 0, 50)
+Axe_Duplication.Font = Enum.Font.SourceSans
+Axe_Duplication.Text = "Axe Duplication"
+Axe_Duplication.TextColor3 = Color3.fromRGB(0, 0, 0)
+Axe_Duplication.TextSize = 15.000
+
+TextButton_Roundify_12px_10.Name = "TextButton_Roundify_12px"
+TextButton_Roundify_12px_10.Parent = Axe_Duplication
+TextButton_Roundify_12px_10.Active = true
+TextButton_Roundify_12px_10.AnchorPoint = Vector2.new(0.5, 0.5)
+TextButton_Roundify_12px_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_Roundify_12px_10.BackgroundTransparency = 1.000
+TextButton_Roundify_12px_10.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextButton_Roundify_12px_10.Selectable = true
+TextButton_Roundify_12px_10.Size = UDim2.new(1, 0, 1, 0)
+TextButton_Roundify_12px_10.Image = "rbxassetid://3570695787"
+TextButton_Roundify_12px_10.ImageColor3 = Color3.fromRGB(179, 255, 233)
+TextButton_Roundify_12px_10.ImageTransparency = 0.600
+TextButton_Roundify_12px_10.ScaleType = Enum.ScaleType.Slice
+TextButton_Roundify_12px_10.SliceCenter = Rect.new(100, 100, 100, 100)
+TextButton_Roundify_12px_10.SliceScale = 0.120
+
+Jailbreak_Scripts_List.Name = "Jailbreak_Scripts_List"
+Jailbreak_Scripts_List.Parent = Frame
+Jailbreak_Scripts_List.BackgroundColor3 = Color3.fromRGB(179, 255, 233)
+Jailbreak_Scripts_List.BackgroundTransparency = 0.600
+Jailbreak_Scripts_List.BorderSizePixel = 0
+Jailbreak_Scripts_List.Position = UDim2.new(0.582320035, 0, 0.240533337, 0)
+Jailbreak_Scripts_List.Size = UDim2.new(0, 200, 0, 368)
+Jailbreak_Scripts_List.HorizontalScrollBarInset = Enum.ScrollBarInset.Always
+
+Autofarm.Name = "Autofarm"
+Autofarm.Parent = Jailbreak_Scripts_List
+Autofarm.BackgroundColor3 = Color3.fromRGB(179, 255, 233)
+Autofarm.BackgroundTransparency = 1.000
+Autofarm.BorderSizePixel = 0
+Autofarm.Position = UDim2.new(0.0399999991, 0, 0, 10)
+Autofarm.Size = UDim2.new(0, 165, 0, 50)
+Autofarm.Font = Enum.Font.SourceSans
+Autofarm.Text = "Autofarm GUI"
+Autofarm.TextColor3 = Color3.fromRGB(0, 0, 0)
+Autofarm.TextSize = 15.000
+
+TextButton_Roundify_12px_11.Name = "TextButton_Roundify_12px"
+TextButton_Roundify_12px_11.Parent = Autofarm
+TextButton_Roundify_12px_11.Active = true
+TextButton_Roundify_12px_11.AnchorPoint = Vector2.new(0.5, 0.5)
+TextButton_Roundify_12px_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_Roundify_12px_11.BackgroundTransparency = 1.000
+TextButton_Roundify_12px_11.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextButton_Roundify_12px_11.Selectable = true
+TextButton_Roundify_12px_11.Size = UDim2.new(1, 0, 1, 0)
+TextButton_Roundify_12px_11.Image = "rbxassetid://3570695787"
+TextButton_Roundify_12px_11.ImageColor3 = Color3.fromRGB(179, 255, 233)
+TextButton_Roundify_12px_11.ImageTransparency = 0.600
+TextButton_Roundify_12px_11.ScaleType = Enum.ScaleType.Slice
+TextButton_Roundify_12px_11.SliceCenter = Rect.new(100, 100, 100, 100)
+TextButton_Roundify_12px_11.SliceScale = 0.120
+
+Infinite_Nitro.Name = "Infinite_Nitro"
+Infinite_Nitro.Parent = Jailbreak_Scripts_List
+Infinite_Nitro.BackgroundColor3 = Color3.fromRGB(179, 255, 233)
+Infinite_Nitro.BackgroundTransparency = 1.000
+Infinite_Nitro.BorderSizePixel = 0
+Infinite_Nitro.Position = UDim2.new(0.0399999991, 0, 0, 190)
+Infinite_Nitro.Size = UDim2.new(0, 165, 0, 50)
+Infinite_Nitro.Font = Enum.Font.SourceSans
+Infinite_Nitro.Text = "Infinite Nitro"
+Infinite_Nitro.TextColor3 = Color3.fromRGB(0, 0, 0)
+Infinite_Nitro.TextSize = 15.000
+
+TextButton_Roundify_12px_12.Name = "TextButton_Roundify_12px"
+TextButton_Roundify_12px_12.Parent = Infinite_Nitro
+TextButton_Roundify_12px_12.Active = true
+TextButton_Roundify_12px_12.AnchorPoint = Vector2.new(0.5, 0.5)
+TextButton_Roundify_12px_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_Roundify_12px_12.BackgroundTransparency = 1.000
+TextButton_Roundify_12px_12.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextButton_Roundify_12px_12.Selectable = true
+TextButton_Roundify_12px_12.Size = UDim2.new(1, 0, 1, 0)
+TextButton_Roundify_12px_12.Image = "rbxassetid://3570695787"
+TextButton_Roundify_12px_12.ImageColor3 = Color3.fromRGB(179, 255, 233)
+TextButton_Roundify_12px_12.ImageTransparency = 0.600
+TextButton_Roundify_12px_12.ScaleType = Enum.ScaleType.Slice
+TextButton_Roundify_12px_12.SliceCenter = Rect.new(100, 100, 100, 100)
+TextButton_Roundify_12px_12.SliceScale = 0.120
+
+Car_Speed.Name = "Car_Speed"
+Car_Speed.Parent = Jailbreak_Scripts_List
+Car_Speed.BackgroundColor3 = Color3.fromRGB(179, 255, 233)
+Car_Speed.BackgroundTransparency = 1.000
+Car_Speed.BorderSizePixel = 0
+Car_Speed.Position = UDim2.new(0.0399999991, 0, 0, 130)
+Car_Speed.Size = UDim2.new(0, 165, 0, 50)
+Car_Speed.Font = Enum.Font.SourceSans
+Car_Speed.Text = "Car Speed"
+Car_Speed.TextColor3 = Color3.fromRGB(0, 0, 0)
+Car_Speed.TextSize = 15.000
+
+TextButton_Roundify_12px_13.Name = "TextButton_Roundify_12px"
+TextButton_Roundify_12px_13.Parent = Car_Speed
+TextButton_Roundify_12px_13.Active = true
+TextButton_Roundify_12px_13.AnchorPoint = Vector2.new(0.5, 0.5)
+TextButton_Roundify_12px_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_Roundify_12px_13.BackgroundTransparency = 1.000
+TextButton_Roundify_12px_13.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextButton_Roundify_12px_13.Selectable = true
+TextButton_Roundify_12px_13.Size = UDim2.new(1, 0, 1, 0)
+TextButton_Roundify_12px_13.Image = "rbxassetid://3570695787"
+TextButton_Roundify_12px_13.ImageColor3 = Color3.fromRGB(179, 255, 233)
+TextButton_Roundify_12px_13.ImageTransparency = 0.600
+TextButton_Roundify_12px_13.ScaleType = Enum.ScaleType.Slice
+TextButton_Roundify_12px_13.SliceCenter = Rect.new(100, 100, 100, 100)
+TextButton_Roundify_12px_13.SliceScale = 0.120
+
+Car_Jumppressm.Name = "Car_Jump (press m)"
+Car_Jumppressm.Parent = Jailbreak_Scripts_List
+Car_Jumppressm.BackgroundColor3 = Color3.fromRGB(179, 255, 233)
+Car_Jumppressm.BackgroundTransparency = 1.000
+Car_Jumppressm.BorderSizePixel = 0
+Car_Jumppressm.Position = UDim2.new(0.0399999991, 0, 0, 70)
+Car_Jumppressm.Size = UDim2.new(0, 165, 0, 50)
+Car_Jumppressm.Font = Enum.Font.SourceSans
+Car_Jumppressm.Text = "Car Jump (press m)"
+Car_Jumppressm.TextColor3 = Color3.fromRGB(0, 0, 0)
+Car_Jumppressm.TextSize = 15.000
+
+TextButton_Roundify_12px_14.Name = "TextButton_Roundify_12px"
+TextButton_Roundify_12px_14.Parent = Car_Jumppressm
+TextButton_Roundify_12px_14.Active = true
+TextButton_Roundify_12px_14.AnchorPoint = Vector2.new(0.5, 0.5)
+TextButton_Roundify_12px_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_Roundify_12px_14.BackgroundTransparency = 1.000
+TextButton_Roundify_12px_14.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextButton_Roundify_12px_14.Selectable = true
+TextButton_Roundify_12px_14.Size = UDim2.new(1, 0, 1, 0)
+TextButton_Roundify_12px_14.Image = "rbxassetid://3570695787"
+TextButton_Roundify_12px_14.ImageColor3 = Color3.fromRGB(179, 255, 233)
+TextButton_Roundify_12px_14.ImageTransparency = 0.600
+TextButton_Roundify_12px_14.ScaleType = Enum.ScaleType.Slice
+TextButton_Roundify_12px_14.SliceCenter = Rect.new(100, 100, 100, 100)
+TextButton_Roundify_12px_14.SliceScale = 0.120
+
+Activator.Name = "Activator"
+Activator.Parent = Hub
+
+Frame_2.Parent = Activator
+Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_2.BackgroundTransparency = 1.000
+Frame_2.Position = UDim2.new(0, 0, 0.731707275, 0)
+Frame_2.Size = UDim2.new(0, 67, 0, 31)
+
+Open.Name = "Open"
+Open.Parent = Frame_2
+Open.BackgroundColor3 = Color3.fromRGB(179, 255, 233)
+Open.BackgroundTransparency = 1.000
+Open.BorderSizePixel = 0
+Open.Size = UDim2.new(0.780298471, 0, 0.972462595, 0)
+Open.Font = Enum.Font.SourceSans
+Open.Text = "Open"
+Open.TextColor3 = Color3.fromRGB(0, 0, 0)
+Open.TextSize = 14.000
+
+Open_Roundify_12px.Name = "Open_Roundify_12px"
+Open_Roundify_12px.Parent = Open
+Open_Roundify_12px.Active = true
+Open_Roundify_12px.AnchorPoint = Vector2.new(0.5, 0.5)
+Open_Roundify_12px.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Open_Roundify_12px.BackgroundTransparency = 1.000
+Open_Roundify_12px.Position = UDim2.new(0.5, 0, 0.5, 0)
+Open_Roundify_12px.Selectable = true
+Open_Roundify_12px.Size = UDim2.new(1, 0, 1, 0)
+Open_Roundify_12px.Image = "rbxassetid://3570695787"
+Open_Roundify_12px.ImageColor3 = Color3.fromRGB(179, 255, 233)
+Open_Roundify_12px.ImageTransparency = 0.600
+Open_Roundify_12px.ScaleType = Enum.ScaleType.Slice
+Open_Roundify_12px.SliceCenter = Rect.new(100, 100, 100, 100)
+Open_Roundify_12px.SliceScale = 0.120
+
+-- Scripts:
+
+local function FLXZTB_fake_script() -- Games_List.LocalScript 
+	local script = Instance.new('LocalScript', Games_List)
+
+	gui = game.Players.LocalPlayer.PlayerGui.Hub
+	gui.Frame.Games_List["Metalworks Sandbox Demo"].MouseButton1Click:connect(function()
+		gui.Frame.MSD_Scripts_List.Visible = true
+		gui.Frame.Arsenal_Scripts_List.Visible = false
+		gui.Frame.BaBFT_Scripts_List.Visible = false
+		gui.Frame.LT2_Scripts_List.Visible = false
+		gui.Frame.Jailbreak_Scripts_List.Visible = false
+	end)
+	
+	gui.Frame.Games_List["Arsenal"].MouseButton1Click:connect(function()
+		gui.Frame.MSD_Scripts_List.Visible = false
+		gui.Frame.Arsenal_Scripts_List.Visible = true
+		gui.Frame.BaBFT_Scripts_List.Visible = false
+		gui.Frame.LT2_Scripts_List.Visible = false
+		gui.Frame.Jailbreak_Scripts_List.Visible = false
+	end)
+	
+	gui.Frame.Games_List["Build a Boat For Treasure"].MouseButton1Click:connect(function()
+		gui.Frame.MSD_Scripts_List.Visible = false
+		gui.Frame.Arsenal_Scripts_List.Visible = false
+		gui.Frame.BaBFT_Scripts_List.Visible = true
+		gui.Frame.LT2_Scripts_List.Visible = false
+		gui.Frame.Jailbreak_Scripts_List.Visible = false
+	end)
+	
+	gui.Frame.Games_List["Lumber Tycoon 2"].MouseButton1Click:connect(function()
+		gui.Frame.MSD_Scripts_List.Visible = false
+		gui.Frame.Arsenal_Scripts_List.Visible = false
+		gui.Frame.BaBFT_Scripts_List.Visible = false
+		gui.Frame.LT2_Scripts_List.Visible = true
+		gui.Frame.Jailbreak_Scripts_List.Visible = false
+	end)
+	
+	gui.Frame.Games_List["Jailbreak"].MouseButton1Click:connect(function()
+		gui.Frame.MSD_Scripts_List.Visible = false
+		gui.Frame.Arsenal_Scripts_List.Visible = false
+		gui.Frame.BaBFT_Scripts_List.Visible = false
+		gui.Frame.LT2_Scripts_List.Visible = false
+		gui.Frame.Jailbreak_Scripts_List.Visible = true
+	end)
+end
+coroutine.wrap(FLXZTB_fake_script)()
+local function TJVQV_fake_script() -- Close.LocalScript 
+	local script = Instance.new('LocalScript', Close)
+
+	script.Parent.MouseButton1Click:Connect(function() 
+	game.Players.LocalPlayer.PlayerGui.Hub.Activator.Enabled = true
+	game.Players.LocalPlayer.PlayerGui.Hub.Enabled = false
+	end)
+end
+coroutine.wrap(TJVQV_fake_script)()
+local function BQNZOX_fake_script() -- Weld_GUI.LocalScript 
+	local script = Instance.new('LocalScript', Weld_GUI)
+
+	script.Parent.MouseButton1Click:Connect(function() 
+		loadstring(game:HttpGet(("https://raw.githubusercontent.com/SuperMCYT/SuperHub/master/MSD_Weld_GUI.txt"),true))()
+	end)
+end
+coroutine.wrap(BQNZOX_fake_script)()
+local function EHWSZE_fake_script() -- Large_Torso.LocalScript 
+	local script = Instance.new('LocalScript', Large_Torso)
+
+	script.Parent.MouseButton1Click:Connect(function() 
+		loadstring(game:HttpGet(("https://raw.githubusercontent.com/SuperMCYT/SuperHub/master/Aresenal_THICC.lua"),true))()
+	end)
+end
+coroutine.wrap(EHWSZE_fake_script)()
+local function OTTQ_fake_script() -- Unlimited_Blocks.LocalScript 
+	local script = Instance.new('LocalScript', Unlimited_Blocks)
+
+	script.Parent.MouseButton1Click:Connect(function() 
+		loadstring(game:HttpGet(("https://raw.githubusercontent.com/SuperMCYT/SuperHub/master/MSD_Weld_GUI.txt"),true))()
+	end)
+end
+coroutine.wrap(OTTQ_fake_script)()
+local function QSDAXAD_fake_script() -- Axe_Duplication.LocalScript 
+	local script = Instance.new('LocalScript', Axe_Duplication)
+
+	script.Parent.MouseButton1Click:Connect(function() 
+		loadstring(game:HttpGet(("https://raw.githubusercontent.com/SuperMCYT/SuperHub/master/MSD_Weld_GUI.txt"),true))()
+	end)
+end
+coroutine.wrap(QSDAXAD_fake_script)()
+local function VWCHVT_fake_script() -- Autofarm.LocalScript 
+	local script = Instance.new('LocalScript', Autofarm)
+
+	script.Parent.MouseButton1Click:Connect(function() 
+		loadstring(game:GetObjects("rbxassetid://1461971147")[1].Source)()
+	end)
+end
+coroutine.wrap(VWCHVT_fake_script)()
+local function RJROBL_fake_script() -- Infinite_Nitro.LocalScript 
+	local script = Instance.new('LocalScript', Infinite_Nitro)
+
+	script.Parent.MouseButton1Click:Connect(function() 
+		loadstring(game:HttpGet(("https://raw.githubusercontent.com/SuperMCYT/SuperHub/master/InfiniteNitro.lua"),true))()
+	end)
+end
+coroutine.wrap(RJROBL_fake_script)()
+local function TLPRBJ_fake_script() -- Car_Speed.LocalScript 
+	local script = Instance.new('LocalScript', Car_Speed)
+
+	script.Parent.MouseButton1Click:Connect(function() 
+		loadstring(game:HttpGet(("https://raw.githubusercontent.com/SuperMCYT/SuperHub/master/jbfast.lua"),true))()
+	end)
+end
+coroutine.wrap(TLPRBJ_fake_script)()
+local function KTWL_fake_script() -- Car_Jumppressm.LocalScript 
+	local script = Instance.new('LocalScript', Car_Jumppressm)
+
+	script.Parent.MouseButton1Click:Connect(function() 
+		loadstring(game:HttpGet(("https://raw.githubusercontent.com/SuperMCYT/SuperHub/master/jbcarfly.lua"),true))()
+	end)
+end
+coroutine.wrap(KTWL_fake_script)()
+local function KCSKOOT_fake_script() -- Open.LocalScript 
+	local script = Instance.new('LocalScript', Open)
+
+	script.Parent.MouseButton1Click:Connect(function() -- When you press the first GUI button do this function
+		game.Players.LocalPlayer.PlayerGui.Hub.Enabled = true -- sets the second GUI to be visble
+		game.Players.LocalPlayer.PlayerGui.Hub.Activator.Enabled = false
+	end)
+	
+end
+coroutine.wrap(KCSKOOT_fake_script)()
